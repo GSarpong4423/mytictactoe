@@ -2,15 +2,44 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 body {
-max-width: 300px;
-margin: 0 auto;
-// margin: 0px;
-background-color: orange;
+  max-width: 500px;
+  // margin-left: 00px;
+margin: 0px auto;
+background-color: turquoise;
 }
 
 header {
-  margin: 0 auto;
+  margin-right: 100px;
   margin-bottom: 50px;
+  float: left;
+  }
+
+  h1 {
+    font-family: Comic Sans MS;
+    margin-left: 50px;
+
+}
+  ul {
+    width: auto;
+    float: left;
+    margin-top: 2px;
+  }
+
+  li {
+    display: inline-block;
+    padding: 15px 30px;
+  }
+  a {
+    text-align: center;
+    color: blue;
+    text-decoration-color: none;
+    font-size: 1.2vw;
+
+  }
+
+  button {
+    margin-bottom: 20px;
+
   }
 
   // h1 {
@@ -28,18 +57,13 @@ header {
     height: 90px;
     text-align: center;
     background-color: white;
-    margin-top: 1px;
+    margin-top: 2px;
     font-size: 30px;
     padding: 40px;
     padding-top: 0px;
   }
 
-  button {
-    padding: 10px;
-    font-size: 20px;
 
-    margin-top: 10px;
-  }
 
 // .cell {
 //   box-sizing: border-box;

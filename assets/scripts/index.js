@@ -5,25 +5,37 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
-const PLAYER_TOKEN = 'X'
-const COMPUTER_TOKEN = 'O'
+  //  const PLAYER_TOKEN = 'X'
+// const COMPUTER_TOKEN = 'O'
 
 $(() => {
-  const grid = [
-    ['','','',''],
-    ['','','',''],
-    ['','','',''] // blank 3x3 grid array and open strings
-  ];
-  // event for user to click
-  $('.col').click(function() {
-    // $this = $(this);
-    $(this).html(PLAYER_TOKEN);
-    const r = $(this).data('r');  // .this is equal to 'r' and 'c'
-    const c = $(this).data('c');
-    grid[r][c] = PLAYER_TOKEN;
-    console.log(grid);
-  });
-})
+
+let player = 'x'
+const gameBoard = ['', '', '', '', '', '', '', '', '']
+
+var test = document.getElementById('board');
+test.onclick = function() {
+    console.log('Hello');
+}
+
+    // newFunction();
+    // if(isPlayerXTurn) {
+    //   $(this).html('X')
+    //   gameBoard[id] = 'X'
+    // } else {
+    //   $(this).html('O')
+    //   gameBoard[id] = 'X'
+    // }
+    // isPlayerXTurn = !isPlayerXTurn
+  // }
+
+// console.log($("#0").attr('id'))
+ })
 
 
-// not to repeat code
+
+
+// function newFunction() {
+//   $('.col').click(function () {
+//   });
+
