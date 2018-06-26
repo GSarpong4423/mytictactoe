@@ -5,37 +5,9 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
-  //  const PLAYER_TOKEN = 'X'
-// const COMPUTER_TOKEN = 'O'
+
+const events = require('./game/evens')
 
 $(() => {
-
-let player = 'x'
-const gameBoard = ['', '', '', '', '', '', '', '', '']
-
-var test = document.getElementById('board');
-test.onclick = function() {
-    console.log('Hello');
-}
-
-    // newFunction();
-    // if(isPlayerXTurn) {
-    //   $(this).html('X')
-    //   gameBoard[id] = 'X'
-    // } else {
-    //   $(this).html('O')
-    //   gameBoard[id] = 'X'
-    // }
-    // isPlayerXTurn = !isPlayerXTurn
-  // }
-
-// console.log($("#0").attr('id'))
- })
-
-
-
-
-// function newFunction() {
-//   $('.col').click(function () {
-//   });
-
+ events.addHandlers();
+})

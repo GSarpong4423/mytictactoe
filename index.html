@@ -6,62 +6,96 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <style>
+      .tic-tac-toe .board table {
+      cell-spacing: 0px;
+      border-spacing: 0px;
+      border-collapse: separate;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin: 30px auto;
+    }
+    .tic-tac-toe .board td {
+      border: 2px solid #000;
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      font: 200 60px helvetica neue, arial;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .tic-tac-toe .board tr:first-child td {
+      border-top: none
+    }
+    .tic-tac-toe .board tr:last-child td {
+      border-bottom: none
+    }
+    .tic-tac-toe .board tr td:first-child {
+      border-left: none;
+    }
+    .tic-tac-toe .board tr td:last-child {
+      border-right: none;
+    }
+    .tic-tac-toe .board td.X {
+      color: #238EE1;
+    }
+    .tic-tac-toe .board td.O {
+      color: #FF1010;
+    }
+
+
+Add CommentCollapse 
+      </style>
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <button id="show-alert" type="button">New Game</button>
       <header>
           <h1>Tic Tac Toe</h1>
-          <button class="btn btn-default" type="submit">New Game</button>
-          <button class="btn btn-default" type="submit">Quit Game</button>
-            <!-- <nav>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Sign Up</a></li>
-                    <li><a>Help</a></li>
-                  </ul>
-
-
-            </nav> -->
-
-        <!-- </header> -->
-<div class="container-fluid" id='board'>
-      <div class="row">
-        <div class="col" id='0'></div>
-        <div class="col" id='1'></div>
-        <div class="col" id='2'></div>
+          <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="text" name="credentials[password]" placeholder="Password">
+          <input type="text" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+      <form id="sign-in" class="border">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign in!">
+        </fieldset>
+      </form>
+      <form id="change-password" class="border">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password!">
+        </fieldset>
+      </form>
+      <form id="sign-out" class="border">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+      <div class="container-fluid">
+      <div class="game-panel">
+        <div class="tic-tac-toe">
+            <div class="board"></div>
+          </div>
       </div>
-      <div class="row">
-        <div class="col" id='3'></div>
-        <div class="col" id='4'></div>
-        <div class="col" id='5'></div>
-      </div>
-      <div class="row">
-        <div class="col" id='6'></div>
-        <div class="col" id='7'></div>
-        <div class="col" id='8'></div>
-      </div>
-    </div>
-      <!-- data r for rows and c for column, Ilearneded that data- will privide data and will allow JS to run. -->
-
-
-
-
-
-        <!-- <div class="box">
-            <div class="cell">1</div>
-            <div class="cell">2</div>
-            <div class="cell">3</div>
-            <div class="cell">4</div>
-            <div class="cell">5</div>
-            <div class="cell">6</div>
-            <div class="cell">7</div>
-            <div class="cell">8</div>
-            <div class="cell">9</div>
-          </div> -->
     </body>
 </html>
-
-

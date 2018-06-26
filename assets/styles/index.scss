@@ -14,38 +14,14 @@ header {
   float: left;
   }
 
-  h1 {
-    font-family: Comic Sans MS;
-    margin-left: 50px;
-
+h1 {
+  font-family: Comic Sans MS;
+  margin-left: 50px;
 }
-  ul {
-    width: auto;
-    float: left;
-    margin-top: 2px;
-  }
 
-  li {
-    display: inline-block;
-    padding: 15px 30px;
-  }
-  a {
-    text-align: center;
-    color: blue;
-    text-decoration-color: none;
-    font-size: 1.2vw;
-
-  }
-
-  button {
+button {
     margin-bottom: 20px;
-
-  }
-
-  // h1 {
-    // margin: 0 auto;
-    // text-align: center;
-    // }
+}
 
   .row {
 
