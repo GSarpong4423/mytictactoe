@@ -67,49 +67,49 @@ const markElement = (event) => {
   }
 
 }
-const checkForWinner = (mark, grid_size) => {
-  let vertical_count = 0,
-    horizontal_count = 0,
-    right_to_left_count = 0,
-    left_to_right_count = 0;
+// const checkForWinner = (mark, grid_size) => {
+//   let vertical_count = 0,
+//     horizontal_count = 0,
+//     right_to_left_count = 0,
+//     left_to_right_count = 0;
 
-  for (let i = 0; i < grid_size; i++) {
+//   for (let i = 0; i < grid_size; i++) {
 
-    vertical_count = 0;
-    horizontal_count = 0;
+//     vertical_count = 0;
+//     horizontal_count = 0;
 
-    for (let j = 0; j < grid_size; j++) {
+//     for (let j = 0; j < grid_size; j++) {
 
-      if (data[i + '' + j] == mark) {
-        horizontal_count++;
-      }
-      console.log(data)
-      console.log(j + i)
-      if (data[j + '' + i] == mark) {
-        vertical_count++;
-      }
-    }
+//       if (data[i + '' + j] == mark) {
+//         horizontal_count++;
+//       }
+//       console.log(data)
+//       console.log(j + i)
+//       if (data[j + '' + i] == mark) {
+//         vertical_count++;
+//       }
+//     }
 
-    if (data[i + '' + i] == mark) {
-      left_to_right_count++;
-    }
+//     if (data[i + '' + i] == mark) {
+//       left_to_right_count++;
+//     }
 
-    if (data[(grid_size - 1 - i) + '' + i] == mark) {
-      right_to_left_count++;
-    }
+//     if (data[(grid_size - 1 - i) + '' + i] == mark) {
+//       right_to_left_count++;
+//     }
 
-    if (horizontal_count == grid_size || vertical_count == grid_size) {
-      return true;
-    }
+//     if (horizontal_count == grid_size || vertical_count == grid_size) {
+//       return true;
+//     }
 
-  }
+  // }
 
-  if (left_to_right_count == grid_size || right_to_left_count == grid_size) {
-    return true;
-  }
+  // if (left_to_right_count == grid_size || right_to_left_count == grid_size) {
+  //   return true;
+  // }
 
-  return false;
-}
+  // return false;
+
 module.exports = {
   paintBoard
 }
