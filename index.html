@@ -47,6 +47,12 @@
     .tic-tac-toe .board td.O {
       color: #FF1010;
     }
+    /* #changepassword {
+      display: inline;
+    }
+    #signout {
+      display: inline;
+    } */
 
 
 Add CommentCollapse 
@@ -57,10 +63,13 @@ Add CommentCollapse 
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <button id="show-alert" type="button">New Game</button>
-      <header>
-          <h1>Tic Tac Toe</h1>
-          <form id="sign-up" class="border">
+    <button id="show-alert" type="button">New Game</button>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
+      <div id="sign-up-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form id="sign-up" class="border">
         <fieldset>
           <legend>Sign up!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
@@ -69,7 +78,15 @@ Add CommentCollapse 
           <input type="submit" value="Sign up!">
         </fieldset>
       </form>
-      <form id="sign-in" class="border">
+        </div>
+       </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+      <div id="sign-in-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form id="sign-in" class="border">
         <fieldset>
           <legend>Sign in!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
@@ -77,7 +94,15 @@ Add CommentCollapse 
           <input type="submit" value="Sign in!">
         </fieldset>
       </form>
-      <form id="change-password" class="border">
+        </div>
+       </div>
+      </div>
+
+      <button id="changepassword" type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-password-modal">Change Password</button>
+      <div id="change-password-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form id="change-password" class="border">
         <fieldset>
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Old Password">
@@ -85,12 +110,27 @@ Add CommentCollapse 
           <input type="submit" value="Change Password!">
         </fieldset>
       </form>
-      <form id="sign-out" class="border">
+        </div>
+       </div>
+      </div>
+
+      <button id="signout" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-out-modal">Sign Out</button>
+      <div id="sign-out-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form id="sign-out" class="border">
         <fieldset>
           <legend>Sign Out!</legend>
           <input type="submit" value="Sign Out!">
         </fieldset>
       </form>
+        </div>
+       </div>
+      </div>
+
+      <header>
+        <h1>Tic Tac Toe</h1>
+      </header>
       <div class="container-fluid">
       <div class="game-panel">
         <div class="tic-tac-toe">
