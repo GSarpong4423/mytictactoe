@@ -6,66 +6,16 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <style>
-      .tic-tac-toe .board table {
-      cell-spacing: 0px;
-      border-spacing: 0px;
-      border-collapse: separate;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      margin: 30px auto;
-    }
-    .tic-tac-toe .board td {
-      border: 2px solid #000;
-      height: 100px;
-      width: 100px;
-      text-align: center;
-      font: 200 60px helvetica neue, arial;
-      cursor: pointer;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    .tic-tac-toe .board tr:first-child td {
-      border-top: none
-    }
-    .tic-tac-toe .board tr:last-child td {
-      border-bottom: none
-    }
-    .tic-tac-toe .board tr td:first-child {
-      border-left: none;
-    }
-    .tic-tac-toe .board tr td:last-child {
-      border-right: none;
-    }
-    .tic-tac-toe .board td.X {
-      color: #238EE1;
-    }
-    .tic-tac-toe .board td.O {
-      color: #FF1010;
-    }
-    /* #changepassword {
-      display: inline;
-    }
-    #signout {
-      display: inline;
-    } */
-
-
-Add CommentCollapse 
-      </style>
 
       <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-    <button id="show-alert" type="button">New Game</button>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
+    <body background="https://i.pinimg.com/originals/10/9d/48/109d48697f52ed4165ffeb862bf40620.png">
+      <header>
+        <h1>Tic - Tac - Toe</h1>
+      </header>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
       <div id="sign-up-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
@@ -81,7 +31,6 @@ Add CommentCollapse 
         </div>
        </div>
       </div>
-
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
       <div id="sign-in-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
@@ -97,7 +46,6 @@ Add CommentCollapse 
         </div>
        </div>
       </div>
-
       <button id="changepassword" type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-password-modal">Change Password</button>
       <div id="change-password-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
@@ -113,7 +61,6 @@ Add CommentCollapse 
         </div>
        </div>
       </div>
-
       <button id="signout" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-out-modal">Sign Out</button>
       <div id="sign-out-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
@@ -127,15 +74,28 @@ Add CommentCollapse 
         </div>
        </div>
       </div>
-
-      <header>
-        <h1>Tic Tac Toe</h1>
-      </header>
       <div class="container-fluid">
       <div class="game-panel">
         <div class="tic-tac-toe">
             <div class="board"></div>
           </div>
-      </div>
+      </div> -->
+        <div class="grid">
+            <div class="row">
+              <div class="cell" id="1"></div>
+              <div class="cell" id="2"></div>
+              <div class="cell" id="3"></div>
+            </div>
+            <div class="row">
+              <div class="cell" id="4"></div>
+              <div class="cell" id="5"></div>
+              <div class="cell" id="6"></div>
+            </div>
+            <div class="row">
+              <div class="cell" id="7"></div>
+              <div class="cell" id="8"></div>
+              <div class="cell" id="9"></div>
+            </div>
+          </div>
     </body>
 </html>
