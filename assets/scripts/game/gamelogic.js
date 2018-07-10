@@ -1,86 +1,49 @@
 // 'use strict'
 // show the click - get information
 
-let currentPlayer = 'x'
+const playerXTurn = true
+const token = 'X'
+// let currentPlayer =
+const grid = ['', '', '', '', '', '', '', '', '' ]
 
-const alternateTurns = function () {
-  if (currentPlayer === 'x') {
-    currentPlayer = 'o'
-  } else {
-    currentPlayer = 'x'
-  }
-}
-
-// let player = true
-// let token = 'X'
-''
-// const Xturn = function(clickedCell)
-// if (playerXTurn) {
-//   token = 'X'
-// } else {
-//   token = 'O'
-// }
-
-// function drawBoard()
-// {
-//   const parent = document.getElementById("grid");
-//   const counter = 1;
-
-//   for (let i = 0; i < 3; i++)
-//   {
-//     let row = document.createElement("row");
-
-//     for(let x = 0; x < size; x++)
-//     {
-//       let col = document.createElement("cell");
-//       cell.innerHTML = counter;
-
-//       row.appendChild(cell);
-//     }
-//     parent.appendChild(row);
+// const alternateTurns = function() {
+//   if (playerXTurn) {
+//     token = 'X'
+//   } else {
+//     token = 'O'
 //   }
+
 // }
-
-
 // playerXTurn = !playerXTurn
 
+// Checking for winners - code influenced by stack overflow
+const checkResult = function () {
+  $('.row').each(function (i, val) {
+    $(this).find('.cell').each(function (j, val2) {
+      arr[i][j] = parseInt($(this).attr('data-points'))
+    })
+  })
 
-// x
+  for (let i = 0; i < 3; i++) {
+    let rowSum = 0
+    for (let j = 0; j < 3; j++) {
+      rowSum += arr[i][j]
+    }
+    if (rowSum === 3) { alert('Circle WIN!')} else if (rowSum === -3) { alert('Cross WIN!')}
+  }
 
-// // let grid_size = 0;
-//  let data = {};
-//  let moves = 0;
+  for (let i = 0; i < 3; i++) {
+    let colSum = 0
+    for (let j = 0; j < 3; j++) {
+      colSum += arr[j][i]
+    }
+    if (colSum === 3) { alert('Circle WIN!')} else if (colSum === -3) { alert('Cross WIN!')}
+  }
 
-// const markElement = (event) => {
-//      let td = event.target;
+  if (arr[0][0] + arr[1][1] + arr[2][2] === 3) { alert('Circle WIN!') } else if (arr[0][0] + arr[1][1] + arr[2][2] === -3) { alert('Cross WIN!')}
 
-//    if (td.innerHTML) {
-//       return;
-//        // a check to see if each td has an X or an O
-//   //   }
-
-//   //   // get values rows and collums
-//   //   let row = td.getAttribute('row'), column = td.getAttribute('column');
-
-//      let current_mark =  null//moves % 2 === 0 ? 'X' : 'O';
-//   // //   its going to give t\you the remainder which will be either 0 or 1 or X and O
-//      if((moves % 2) === 0) {
-//        current_mark = 'X';
-//        console.log(data)
-//      }
-//      else {
-//     current_mark = 'O'
-//        console.log(data)
-//      }
-
-// ----
-
-// When i click a box change the inside html to "X"
-
-
-
-
-
+  if (arr[2][0] + arr[1][1] + arr[0][2] === 3) { alert('Circle WIN!') } else if (arr[2][0] + arr[1][1] + arr[0][2] === -3) { alert('Cross WIN!')}
+}
 
 // module.exports = {
 //   clickEvent
