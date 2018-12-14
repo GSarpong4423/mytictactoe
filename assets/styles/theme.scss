@@ -1,0 +1,162 @@
+body {
+  align-items: center;
+  background-color: $background-color;
+  color: $font-color;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Grand Hotel', cursive;
+  font-size: $body-font-size;
+  justify-content: center;
+  line-height: $body-line-height;
+  margin: $margin 0;
+  padding: $body-padding;
+}
+
+a {
+  color: $link-color;
+}
+
+a:hover {
+  color: $link-hover-color;
+}
+
+.btn {
+  font-size: $body-font-size;
+}
+
+h1 {
+  font-size: $header-font-size;
+  line-height: $header-line-height;
+}
+
+p,
+form,
+img,
+.game-container {
+  margin: $element-margin;
+}
+
+input {
+  background-color: $white-background-color;
+  border-radius: 6px;
+  margin-bottom: 10px;
+
+  :focus {
+    background-color: $input-focus-color;
+    outline: none;
+  }
+}
+
+.tic-tac-toe-container {
+  font-size: $tic-tac-toe-font-size;
+
+  p {
+    font-size: $tic-tac-toe-font-size;
+    text-align: center;
+  }
+
+  .new-game-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.section-container {
+  background-color: $section-background-color;
+  border-radius: $section-border-radius;
+  padding: $section-padding;
+}
+
+.alert-container {
+  p {
+    margin: 5px;
+  }
+}
+
+.well {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.game-container {
+  p {
+    font-size: $board-font-size;
+    line-height: 130px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.board-top-row,
+.board-middle-row,
+.board-bottom-row {
+  cursor: pointer;
+  display: flex;
+}
+
+.board-top-row,
+.board-middle-row {
+  border-bottom: 5px solid $border-color;
+}
+
+.border-right {
+  border-right: 5px solid $border-color;
+}
+
+.game-box {
+  background-color: $white-background-color;
+  height: 130px;
+  width: 130px;
+}
+
+.bottom-buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  button {
+    margin: 2px;
+  }
+}
+
+.modal-content {
+  h1,
+  p {
+    text-align: center;
+  }
+}
+
+.win-background {
+  background-color: $link-color;
+  border-radius: $section-border-radius;
+}
+
+.draw-background {
+  background-color: $section-background-color;
+  border-radius: $section-border-radius;
+}
+
+.warning-background {
+  background-color: $link-hover-color;
+  border-radius: $section-border-radius;
+}
+
+@media (max-width: 450px) {
+  body {
+    margin: 20px;
+  }
+
+  img {
+    height: auto;
+    width: 300px;
+  }
+
+  .section-container {
+    padding: 10px 30px 30px;
+  }
+
+  .game-box {
+    width: 120px;
+  }
+}
