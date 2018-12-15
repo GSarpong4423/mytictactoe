@@ -12,6 +12,7 @@ let currentBoard = ['', '', '', '', '', '', '', '', '']
 let currentPlayer = 'x'
 let winOrDraw = ''
 
+// create game - show game board
 const createGameSuccess = (response) => {
   store.game = response.game
   resetBoard()
@@ -22,6 +23,7 @@ const createGameSuccess = (response) => {
 const createGameFail = () => {
   $('#user-auth-message').html('<p>Sorry, starting a new game failed.</p>').addClass('alert alert-danger')
 }
+
 
 const canContinue = () => {
   if (winOrDraw === 'win' || winOrDraw === 'draw') {
