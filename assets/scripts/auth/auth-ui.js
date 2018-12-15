@@ -2,14 +2,6 @@
 
 const store = require('../store.js')
 
-const signOutClear = () => {
-  $('#sign-up input').val('')
-  $('#sign-in input').val('')
-  $('#change-password input').val('')
-  $('#user-auth-message').html('')
-  $('#change-password-container').hide()
-}
-
 const signUpSuccess = () => {
   $('#user-auth-message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
   $('#user-auth-message').html("<p>You've signed up! Now sign in.</p>").addClass('alert alert-success')
@@ -68,6 +60,14 @@ const signOutSuccess = () => {
 const signOutFail = () => {
   $('#user-auth-message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
   $('#user-auth-message').html('<p>Sign out failed.</p>')
+}
+
+const signOutClear = () => {
+  $('#sign-up input').val('')
+  $('#sign-in input').val('')
+  $('#change-password input').val('')
+  $('#user-auth-message').html('')
+  $('#change-password-container').hide()
 }
 
 module.exports = {
